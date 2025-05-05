@@ -7,6 +7,7 @@ import '../bloc/theme_event.dart';
 import '../bloc/theme_state.dart';
 import '../widgets/advanced_color_properties.dart';
 import '../widgets/animation_options.dart';
+import '../widgets/app_bar_customization.dart';
 import '../widgets/blend_level_slider.dart';
 import '../widgets/color_scheme_selector.dart';
 import '../widgets/component_styling.dart';
@@ -236,49 +237,83 @@ class _ThemeSettingsScreenState extends State<ThemeSettingsScreen> {
                 index: 3,
                 title: 'Component Styling',
                 icon: Icons.widgets,
-                child: ComponentStylingWidget(
-                  cardBorderRadius: themeModel.cardBorderRadius,
-                  buttonBorderRadius: themeModel.buttonBorderRadius,
-                  textFieldBorderRadius: themeModel.textFieldBorderRadius,
-                  appBarElevation: themeModel.appBarElevation,
-                  cardElevation: themeModel.cardElevation,
-                  dialogElevation: themeModel.dialogElevation,
-                  adaptiveStyling: themeModel.adaptiveStyling,
-                  onCardBorderRadiusChanged: (radius) {
-                    context.read<ThemeBloc>().add(
-                      ChangeCardBorderRadiusEvent(radius),
-                    );
-                  },
-                  onButtonBorderRadiusChanged: (radius) {
-                    context.read<ThemeBloc>().add(
-                      ChangeButtonBorderRadiusEvent(radius),
-                    );
-                  },
-                  onTextFieldBorderRadiusChanged: (radius) {
-                    context.read<ThemeBloc>().add(
-                      ChangeTextFieldBorderRadiusEvent(radius),
-                    );
-                  },
-                  onAppBarElevationChanged: (elevation) {
-                    context.read<ThemeBloc>().add(
-                      ChangeAppBarElevationEvent(elevation),
-                    );
-                  },
-                  onCardElevationChanged: (elevation) {
-                    context.read<ThemeBloc>().add(
-                      ChangeCardElevationEvent(elevation),
-                    );
-                  },
-                  onDialogElevationChanged: (elevation) {
-                    context.read<ThemeBloc>().add(
-                      ChangeDialogElevationEvent(elevation),
-                    );
-                  },
-                  onAdaptiveStylingChanged: (adaptive) {
-                    context.read<ThemeBloc>().add(
-                      ChangeAdaptiveStylingEvent(adaptive),
-                    );
-                  },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ComponentStylingWidget(
+                      cardBorderRadius: themeModel.cardBorderRadius,
+                      buttonBorderRadius: themeModel.buttonBorderRadius,
+                      textFieldBorderRadius: themeModel.textFieldBorderRadius,
+                      appBarElevation: themeModel.appBarElevation,
+                      cardElevation: themeModel.cardElevation,
+                      dialogElevation: themeModel.dialogElevation,
+                      adaptiveStyling: themeModel.adaptiveStyling,
+                      onCardBorderRadiusChanged: (radius) {
+                        context.read<ThemeBloc>().add(
+                          ChangeCardBorderRadiusEvent(radius),
+                        );
+                      },
+                      onButtonBorderRadiusChanged: (radius) {
+                        context.read<ThemeBloc>().add(
+                          ChangeButtonBorderRadiusEvent(radius),
+                        );
+                      },
+                      onTextFieldBorderRadiusChanged: (radius) {
+                        context.read<ThemeBloc>().add(
+                          ChangeTextFieldBorderRadiusEvent(radius),
+                        );
+                      },
+                      onAppBarElevationChanged: (elevation) {
+                        context.read<ThemeBloc>().add(
+                          ChangeAppBarElevationEvent(elevation),
+                        );
+                      },
+                      onCardElevationChanged: (elevation) {
+                        context.read<ThemeBloc>().add(
+                          ChangeCardElevationEvent(elevation),
+                        );
+                      },
+                      onDialogElevationChanged: (elevation) {
+                        context.read<ThemeBloc>().add(
+                          ChangeDialogElevationEvent(elevation),
+                        );
+                      },
+                      onAdaptiveStylingChanged: (adaptive) {
+                        context.read<ThemeBloc>().add(
+                          ChangeAdaptiveStylingEvent(adaptive),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 24),
+                    const Divider(),
+                    const SizedBox(height: 24),
+                    AppBarCustomizationWidget(
+                      backgroundColor: themeModel.appBarBackgroundColor,
+                      foregroundColor: themeModel.appBarForegroundColor,
+                      centerTitle: themeModel.appBarCenterTitle,
+                      elevation: themeModel.appBarElevation,
+                      onBackgroundColorChanged: (color) {
+                        context.read<ThemeBloc>().add(
+                          ChangeAppBarBackgroundColorEvent(color),
+                        );
+                      },
+                      onForegroundColorChanged: (color) {
+                        context.read<ThemeBloc>().add(
+                          ChangeAppBarForegroundColorEvent(color),
+                        );
+                      },
+                      onCenterTitleChanged: (centerTitle) {
+                        context.read<ThemeBloc>().add(
+                          ChangeAppBarCenterTitleEvent(centerTitle),
+                        );
+                      },
+                      onElevationChanged: (elevation) {
+                        context.read<ThemeBloc>().add(
+                          ChangeAppBarElevationEvent(elevation),
+                        );
+                      },
+                    ),
+                  ],
                 ),
               ),
 
