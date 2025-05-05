@@ -63,6 +63,140 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
     );
     on<ChangeTransparentNavigationBarEvent>(_onChangeTransparentNavigationBar);
     on<ResetThemeEvent>(_onResetTheme);
+
+    on<ChangeAppBarBackgroundColorEvent>(_onChangeAppBarBackgroundColor);
+    on<ChangeAppBarForegroundColorEvent>(_onChangeAppBarForegroundColor);
+    on<ChangeAppBarCenterTitleEvent>(_onChangeAppBarCenterTitle);
+
+    // Icon Theming
+    on<ChangePrimaryIconColorEvent>(_onChangePrimaryIconColor);
+    on<ChangeAppBarIconColorEvent>(_onChangeAppBarIconColor);
+    on<ChangeIconSizeEvent>(_onChangeIconSize);
+
+    // Bottom Navigation
+    on<ChangeBottomNavBackgroundColorEvent>(_onChangeBottomNavBackgroundColor);
+    on<ChangeBottomNavSelectedItemColorEvent>(
+      _onChangeBottomNavSelectedItemColor,
+    );
+    on<ChangeBottomNavUnselectedItemColorEvent>(
+      _onChangeBottomNavUnselectedItemColor,
+    );
+    on<ChangeBottomNavElevationEvent>(_onChangeBottomNavElevation);
+    on<ChangeBottomNavShowSelectedLabelsEvent>(
+      _onChangeBottomNavShowSelectedLabels,
+    );
+    on<ChangeBottomNavShowUnselectedLabelsEvent>(
+      _onChangeBottomNavShowUnselectedLabels,
+    );
+
+    // Button Customization
+    on<ChangeElevatedButtonBackgroundColorEvent>(
+      _onChangeElevatedButtonBackgroundColor,
+    );
+    on<ChangeElevatedButtonForegroundColorEvent>(
+      _onChangeElevatedButtonForegroundColor,
+    );
+    on<ChangeElevatedButtonElevationEvent>(_onChangeElevatedButtonElevation);
+    on<ChangeFilledButtonBackgroundColorEvent>(
+      _onChangeFilledButtonBackgroundColor,
+    );
+    on<ChangeFilledButtonForegroundColorEvent>(
+      _onChangeFilledButtonForegroundColor,
+    );
+    on<ChangeTextButtonForegroundColorEvent>(
+      _onChangeTextButtonForegroundColor,
+    );
+    on<ChangeOutlinedButtonForegroundColorEvent>(
+      _onChangeOutlinedButtonForegroundColor,
+    );
+    on<ChangeOutlinedButtonBorderColorEvent>(
+      _onChangeOutlinedButtonBorderColor,
+    );
+    on<ChangeOutlinedButtonBorderWidthEvent>(
+      _onChangeOutlinedButtonBorderWidth,
+    );
+    on<ChangeFabBackgroundColorEvent>(_onChangeFabBackgroundColor);
+    on<ChangeFabForegroundColorEvent>(_onChangeFabForegroundColor);
+    on<ChangeFabBorderRadiusEvent>(_onChangeFabBorderRadius);
+    on<ChangeFabElevationEvent>(_onChangeFabElevation);
+    on<ChangeFabExtendedEvent>(_onChangeFabExtended);
+
+    // Input Controls
+    on<ChangeTextFieldFillColorEvent>(_onChangeTextFieldFillColor);
+    on<ChangeTextFieldBorderColorEvent>(_onChangeTextFieldBorderColor);
+    on<ChangeTextFieldFocusedBorderColorEvent>(
+      _onChangeTextFieldFocusedBorderColor,
+    );
+    on<ChangeTextFieldLabelColorEvent>(_onChangeTextFieldLabelColor);
+    on<ChangeTextFieldBorderWidthEvent>(_onChangeTextFieldBorderWidth);
+    on<ChangeTextFieldFocusedBorderWidthEvent>(
+      _onChangeTextFieldFocusedBorderWidth,
+    );
+    on<ChangeTextFieldIsFilledEvent>(_onChangeTextFieldIsFilled);
+    on<ChangeTextFieldIsDenseEvent>(_onChangeTextFieldIsDense);
+    on<ChangeCheckboxFillColorEvent>(_onChangeCheckboxFillColor);
+    on<ChangeCheckboxCheckColorEvent>(_onChangeCheckboxCheckColor);
+    on<ChangeCheckboxBorderWidthEvent>(_onChangeCheckboxBorderWidth);
+    on<ChangeCheckboxIsCircularEvent>(_onChangeCheckboxIsCircular);
+    on<ChangeRadioFillColorEvent>(_onChangeRadioFillColor);
+    on<ChangeRadioSizeEvent>(_onChangeRadioSize);
+    on<ChangeSwitchThumbColorEvent>(_onChangeSwitchThumbColor);
+    on<ChangeSwitchTrackColorEvent>(_onChangeSwitchTrackColor);
+    on<ChangeSwitchActiveTrackColorEvent>(_onChangeSwitchActiveTrackColor);
+    on<ChangeSwitchIsMaterial3Event>(_onChangeSwitchIsMaterial3);
+
+    // Lists and Dialogs
+    on<ChangeListTileTextColorEvent>(_onChangeListTileTextColor);
+    on<ChangeListTileSelectedColorEvent>(_onChangeListTileSelectedColor);
+    on<ChangeListTileIconColorEvent>(_onChangeListTileIconColor);
+    on<ChangeListTileHorizontalPaddingEvent>(
+      _onChangeListTileHorizontalPadding,
+    );
+    on<ChangeListTileVerticalPaddingEvent>(_onChangeListTileVerticalPadding);
+    on<ChangeListTileDenseEvent>(_onChangeListTileDense);
+    on<ChangeDialogBackgroundColorEvent>(_onChangeDialogBackgroundColor);
+    on<ChangeDialogBorderRadiusEvent>(_onChangeDialogBorderRadius);
+    on<ChangeSnackBarBackgroundColorEvent>(_onChangeSnackBarBackgroundColor);
+    on<ChangeSnackBarTextColorEvent>(_onChangeSnackBarTextColor);
+    on<ChangeSnackBarActionColorEvent>(_onChangeSnackBarActionColor);
+    on<ChangeSnackBarBorderRadiusEvent>(_onChangeSnackBarBorderRadius);
+    on<ChangeSnackBarElevationEvent>(_onChangeSnackBarElevation);
+    on<ChangeDividerColorEvent>(_onChangeDividerColor);
+    on<ChangeDividerThicknessEvent>(_onChangeDividerThickness);
+    on<ChangeDividerIndentEvent>(_onChangeDividerIndent);
+
+    // Tabs and Navigation
+    on<ChangeTabBarIndicatorColorEvent>(_onChangeTabBarIndicatorColor);
+    on<ChangeTabBarLabelColorEvent>(_onChangeTabBarLabelColor);
+    on<ChangeTabBarUnselectedLabelColorEvent>(
+      _onChangeTabBarUnselectedLabelColor,
+    );
+    on<ChangeTabBarIndicatorWeightEvent>(_onChangeTabBarIndicatorWeight);
+    on<ChangeTabBarIsScrollableEvent>(_onChangeTabBarIsScrollable);
+    on<ChangeNavigationRailBackgroundColorEvent>(
+      _onChangeNavigationRailBackgroundColor,
+    );
+    on<ChangeNavigationRailSelectedIconColorEvent>(
+      _onChangeNavigationRailSelectedIconColor,
+    );
+    on<ChangeNavigationRailUnselectedIconColorEvent>(
+      _onChangeNavigationRailUnselectedIconColor,
+    );
+    on<ChangeNavigationRailSelectedLabelColorEvent>(
+      _onChangeNavigationRailSelectedLabelColor,
+    );
+    on<ChangeNavigationRailUnselectedLabelColorEvent>(
+      _onChangeNavigationRailUnselectedLabelColor,
+    );
+    on<ChangeNavigationRailIndicatorColorEvent>(
+      _onChangeNavigationRailIndicatorColor,
+    );
+    on<ChangeNavigationRailElevationEvent>(_onChangeNavigationRailElevation);
+    on<ChangeNavigationRailWidthEvent>(_onChangeNavigationRailWidth);
+    on<ChangeNavigationRailLabelTypeEvent>(_onChangeNavigationRailLabelType);
+    on<ChangeDrawerBackgroundColorEvent>(_onChangeDrawerBackgroundColor);
+    on<ChangeDrawerWidthEvent>(_onChangeDrawerWidth);
+    on<ChangeDrawerBorderRadiusEvent>(_onChangeDrawerBorderRadius);
   }
 
   // Implementation for all event handlers
@@ -591,5 +725,786 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
         ),
       );
     }
+  }
+
+  Future<void> _onChangeAppBarBackgroundColor(
+    ChangeAppBarBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      appBarBackgroundColor: event.appBarBackgroundColor,
+    );
+
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeAppBarForegroundColor(
+    ChangeAppBarForegroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      appBarForegroundColor: event.appBarForegroundColor,
+    );
+
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeAppBarCenterTitle(
+    ChangeAppBarCenterTitleEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      appBarCenterTitle: event.appBarCenterTitle,
+    );
+
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  // Icon Theming Handlers
+  Future<void> _onChangePrimaryIconColor(
+    ChangePrimaryIconColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      primaryIconColor: event.primaryIconColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeAppBarIconColor(
+    ChangeAppBarIconColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      appBarIconColor: event.appBarIconColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeIconSize(
+    ChangeIconSizeEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      iconSize: event.iconSize,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  // Bottom Navigation Handlers
+  Future<void> _onChangeBottomNavBackgroundColor(
+    ChangeBottomNavBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      bottomNavBackgroundColor: event.bottomNavBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeBottomNavSelectedItemColor(
+    ChangeBottomNavSelectedItemColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      bottomNavSelectedItemColor: event.bottomNavSelectedItemColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeBottomNavUnselectedItemColor(
+    ChangeBottomNavUnselectedItemColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      bottomNavUnselectedItemColor: event.bottomNavUnselectedItemColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeBottomNavElevation(
+    ChangeBottomNavElevationEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      bottomNavElevation: event.bottomNavElevation,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeBottomNavShowSelectedLabels(
+    ChangeBottomNavShowSelectedLabelsEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      bottomNavShowSelectedLabels: event.bottomNavShowSelectedLabels,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeBottomNavShowUnselectedLabels(
+    ChangeBottomNavShowUnselectedLabelsEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      bottomNavShowUnselectedLabels: event.bottomNavShowUnselectedLabels,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  // Button Customization Handlers
+  Future<void> _onChangeElevatedButtonBackgroundColor(
+    ChangeElevatedButtonBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      elevatedButtonBackgroundColor: event.elevatedButtonBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeElevatedButtonForegroundColor(
+    ChangeElevatedButtonForegroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      elevatedButtonForegroundColor: event.elevatedButtonForegroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeElevatedButtonElevation(
+    ChangeElevatedButtonElevationEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      elevatedButtonElevation: event.elevatedButtonElevation,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFilledButtonBackgroundColor(
+    ChangeFilledButtonBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      filledButtonBackgroundColor: event.filledButtonBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFilledButtonForegroundColor(
+    ChangeFilledButtonForegroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      filledButtonForegroundColor: event.filledButtonForegroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextButtonForegroundColor(
+    ChangeTextButtonForegroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textButtonForegroundColor: event.textButtonForegroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeOutlinedButtonForegroundColor(
+    ChangeOutlinedButtonForegroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      outlinedButtonForegroundColor: event.outlinedButtonForegroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeOutlinedButtonBorderColor(
+    ChangeOutlinedButtonBorderColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      outlinedButtonBorderColor: event.outlinedButtonBorderColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeOutlinedButtonBorderWidth(
+    ChangeOutlinedButtonBorderWidthEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      outlinedButtonBorderWidth: event.outlinedButtonBorderWidth,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFabBackgroundColor(
+    ChangeFabBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      fabBackgroundColor: event.fabBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFabForegroundColor(
+    ChangeFabForegroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      fabForegroundColor: event.fabForegroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFabBorderRadius(
+    ChangeFabBorderRadiusEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      fabBorderRadius: event.fabBorderRadius,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFabElevation(
+    ChangeFabElevationEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      fabElevation: event.fabElevation,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeFabExtended(
+    ChangeFabExtendedEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      fabExtended: event.fabExtended,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  // Input Controls Handlers
+  Future<void> _onChangeTextFieldFillColor(
+    ChangeTextFieldFillColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldFillColor: event.textFieldFillColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldBorderColor(
+    ChangeTextFieldBorderColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldBorderColor: event.textFieldBorderColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldFocusedBorderColor(
+    ChangeTextFieldFocusedBorderColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldFocusedBorderColor: event.textFieldFocusedBorderColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldLabelColor(
+    ChangeTextFieldLabelColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldLabelColor: event.textFieldLabelColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldBorderWidth(
+    ChangeTextFieldBorderWidthEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldBorderWidth: event.textFieldBorderWidth,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldFocusedBorderWidth(
+    ChangeTextFieldFocusedBorderWidthEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldFocusedBorderWidth: event.textFieldFocusedBorderWidth,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldIsFilled(
+    ChangeTextFieldIsFilledEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldIsFilled: event.textFieldIsFilled,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTextFieldIsDense(
+    ChangeTextFieldIsDenseEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      textFieldIsDense: event.textFieldIsDense,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeCheckboxFillColor(
+    ChangeCheckboxFillColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      checkboxFillColor: event.checkboxFillColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeCheckboxCheckColor(
+    ChangeCheckboxCheckColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      checkboxCheckColor: event.checkboxCheckColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeCheckboxBorderWidth(
+    ChangeCheckboxBorderWidthEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      checkboxBorderWidth: event.checkboxBorderWidth,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeCheckboxIsCircular(
+    ChangeCheckboxIsCircularEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      checkboxIsCircular: event.checkboxIsCircular,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeRadioFillColor(
+    ChangeRadioFillColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      radioFillColor: event.radioFillColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeRadioSize(
+    ChangeRadioSizeEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      radioSize: event.radioSize,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSwitchThumbColor(
+    ChangeSwitchThumbColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      switchThumbColor: event.switchThumbColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSwitchTrackColor(
+    ChangeSwitchTrackColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      switchTrackColor: event.switchTrackColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSwitchActiveTrackColor(
+    ChangeSwitchActiveTrackColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      switchActiveTrackColor: event.switchActiveTrackColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSwitchIsMaterial3(
+    ChangeSwitchIsMaterial3Event event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      switchIsMaterial3: event.switchIsMaterial3,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  // Lists and Dialogs Handlers
+  Future<void> _onChangeListTileTextColor(
+    ChangeListTileTextColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      listTileTextColor: event.listTileTextColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeListTileSelectedColor(
+    ChangeListTileSelectedColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      listTileSelectedColor: event.listTileSelectedColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeListTileIconColor(
+    ChangeListTileIconColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      listTileIconColor: event.listTileIconColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeListTileHorizontalPadding(
+    ChangeListTileHorizontalPaddingEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      listTileHorizontalPadding: event.listTileHorizontalPadding,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeListTileVerticalPadding(
+    ChangeListTileVerticalPaddingEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      listTileVerticalPadding: event.listTileVerticalPadding,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeListTileDense(
+    ChangeListTileDenseEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      listTileDense: event.listTileDense,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDialogBackgroundColor(
+    ChangeDialogBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      dialogBackgroundColor: event.dialogBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDialogBorderRadius(
+    ChangeDialogBorderRadiusEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      dialogBorderRadius: event.dialogBorderRadius,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSnackBarBackgroundColor(
+    ChangeSnackBarBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      snackBarBackgroundColor: event.snackBarBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSnackBarTextColor(
+    ChangeSnackBarTextColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      snackBarTextColor: event.snackBarTextColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSnackBarActionColor(
+    ChangeSnackBarActionColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      snackBarActionColor: event.snackBarActionColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSnackBarBorderRadius(
+    ChangeSnackBarBorderRadiusEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      snackBarBorderRadius: event.snackBarBorderRadius,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeSnackBarElevation(
+    ChangeSnackBarElevationEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      snackBarElevation: event.snackBarElevation,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDividerColor(
+    ChangeDividerColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      dividerColor: event.dividerColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDividerThickness(
+    ChangeDividerThicknessEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      dividerThickness: event.dividerThickness,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDividerIndent(
+    ChangeDividerIndentEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      dividerIndent: event.dividerIndent,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  // Tabs and Navigation Handlers
+  Future<void> _onChangeTabBarIndicatorColor(
+    ChangeTabBarIndicatorColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      tabBarIndicatorColor: event.tabBarIndicatorColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTabBarLabelColor(
+    ChangeTabBarLabelColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      tabBarLabelColor: event.tabBarLabelColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTabBarUnselectedLabelColor(
+    ChangeTabBarUnselectedLabelColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      tabBarUnselectedLabelColor: event.tabBarUnselectedLabelColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTabBarIndicatorWeight(
+    ChangeTabBarIndicatorWeightEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      tabBarIndicatorWeight: event.tabBarIndicatorWeight,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeTabBarIsScrollable(
+    ChangeTabBarIsScrollableEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      tabBarIsScrollable: event.tabBarIsScrollable,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailBackgroundColor(
+    ChangeNavigationRailBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailBackgroundColor: event.navigationRailBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailSelectedIconColor(
+    ChangeNavigationRailSelectedIconColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailSelectedIconColor: event.navigationRailSelectedIconColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailUnselectedIconColor(
+    ChangeNavigationRailUnselectedIconColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailUnselectedIconColor:
+          event.navigationRailUnselectedIconColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailSelectedLabelColor(
+    ChangeNavigationRailSelectedLabelColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailSelectedLabelColor: event.navigationRailSelectedLabelColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailUnselectedLabelColor(
+    ChangeNavigationRailUnselectedLabelColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailUnselectedLabelColor:
+          event.navigationRailUnselectedLabelColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailIndicatorColor(
+    ChangeNavigationRailIndicatorColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailIndicatorColor: event.navigationRailIndicatorColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailElevation(
+    ChangeNavigationRailElevationEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailElevation: event.navigationRailElevation,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailWidth(
+    ChangeNavigationRailWidthEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailWidth: event.navigationRailWidth,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeNavigationRailLabelType(
+    ChangeNavigationRailLabelTypeEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      navigationRailLabelType: event.navigationRailLabelType,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDrawerBackgroundColor(
+    ChangeDrawerBackgroundColorEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      drawerBackgroundColor: event.drawerBackgroundColor,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDrawerWidth(
+    ChangeDrawerWidthEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      drawerWidth: event.drawerWidth,
+    );
+    await _updateTheme(updatedThemeModel, emit);
+  }
+
+  Future<void> _onChangeDrawerBorderRadius(
+    ChangeDrawerBorderRadiusEvent event,
+    Emitter<ThemeState> emit,
+  ) async {
+    final updatedThemeModel = state.themeModel.copyWith(
+      drawerBorderRadius: event.drawerBorderRadius,
+    );
+    await _updateTheme(updatedThemeModel, emit);
   }
 }
